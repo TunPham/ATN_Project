@@ -5,8 +5,8 @@ const User = mongoose.Schema({
     userName: {type: String, require:true },
     password: {type: String,require: true},
     author: {type: String,require: true},
-    
+
     slug:{
-        type: String, slug:'name', unique: true,
+        type: String, slug:'userName', unique: true,
     }
 })

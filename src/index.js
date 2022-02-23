@@ -4,8 +4,11 @@ const port = 3000
 const route = require('./routes/index')
 const handlebars  = require('express-handlebars');
 const path = require('path')
+const db = require('./configDB/connectDB')
+
 
 route(app);
+db.connect();
 
 app.use(express.json())
 
