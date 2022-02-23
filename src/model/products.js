@@ -15,5 +15,5 @@ const Product = mongoose.Schema({
 })
 
 mongoose.plugin(slug);
-
+x
 module.exports = mongoose.model('products', Product) // tham so 1 la ten db, tham so 2 la doi tuong Product duoc tao o tren
