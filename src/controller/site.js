@@ -6,4 +6,9 @@ class Site{
     }
 };
 
+class Allproduct{
+    index(req,res){
+        res.render('allproduct')
+    }
+}
 module.exports = new Site()
