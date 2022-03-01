@@ -4,7 +4,7 @@ const userrouter = require('./users')
 function route(app){
     app.get('/', indexController.index)
 
-    app.use('/allproduct', productRouter)
+    app.use('/products', productRouter)
 
     app.use('/user', userrouter)
 }
