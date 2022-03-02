@@ -54,9 +54,21 @@
     box-sizing:border-box;
 }
 .navbar{
-    display:flex;
+    overflow: hidden;
     align-items: center;
     padding:20px;
+    background-color: white;
+}
+.navbar a{
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover{
+    background-color: rgb(247, 212, 212);
 }
 nav{
     flex:1;
@@ -367,7 +379,7 @@ form a{
             <div class="container">
                 <div class="navbar">
                     <div class="logo">
-                    <img src="../LOGO.png" width="125px"> 
+                    <img src="Picture/LOGO.png" width="125px"> 
                     <!--  <img src="" width="125px">-->
                     </div>
             <nav>
