@@ -1,31 +1,4 @@
-// const express = require('express')
-// const app = express()
-// const port = 4000
-// const route = require('./routes/index')
-// const handlebars = require('express-handlebars');
-// const path = require('path')
-// const db = require('./configDB/connectDB')
-// const file = require('express-fileupload')
-// const bp = require('body-parser')
-// const morgan = require('morgan')
-
-// route(app);
-// db.connect();
-
-// app.use(morgan('combined'))
-// app.use(file())
-// app.use(express.json())
-// app.use(express.urlencoded({ extended: true }))
-// app.use(express.static(path.join(__dirname, 'public')))
-// app.engine('handlebars', handlebars.engine());
-// app.set('view engine', 'handlebars');
-// app.set('views', path.join(__dirname, '/views'));
-
-
-// app.listen(port, () => {
-//   console.log(`App is running on http://localhost:${port}`)
-// })
-
+const cookieParser = require('cookie-parser')
 const path = require('path');
 const express = require('express'); // require sẽ đi vào trong node_modules và lấy ra express
 const app = express();
@@ -45,7 +18,7 @@ const fileUpLoad = require('express-fileupload')
 db.connect();
 
 
-
+app.use(cookieParser())
 app.use(
     express.urlencoded({
         extended: true,
@@ -62,8 +35,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.engine('handlebars', exphbs.engine({
     helpers: {
-        sum: function(a,b){
-            return a+b
+        sum: function (a, b) {
+            return a + b
         }
     }
 }));
